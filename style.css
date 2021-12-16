@@ -1,0 +1,54 @@
+/* nav start here */
+/* html {
+  margin: 0;
+} */
+/* header {
+  position: fixed;
+  background-color: #041c32;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  min-height: 2vh;
+}
+header h1 {
+  display: inline-flex;
+  color: #fabb51;
+  padding-top: 0.5em;
+  text-align: left;
+}
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+section {
+  padding-top: 25vh;
+} */
+
+/* form start here */
+#formulir {
+  background-color: #041c32;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px 80px;
+  margin: 20px auto;
+}
+#formulir h2 {
+  color: #fabb51;
+  text-align: center;
+}
+form {
+  margin: auto;
+}
+form label {
+  color: white;
+  padding-top: 0.8em;
+  padding-bottom: 0.2em;
+}
+form button {
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
