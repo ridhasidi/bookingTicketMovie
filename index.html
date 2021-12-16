@@ -29,7 +29,9 @@
       <form onsubmit="kirim(event)">
         <div class="form-group">
           <label for="namaFilm">Nama</label>
-          <select class="form-control" id="namaFilm" onchange="getNama(this.value)">
+          <select class="form-control" id="namaFilm" onchange="getNama(this.value)" required>
+            <!-- Add placeholder -->
+            <option value="" disabled selected hidden>Choose Film</option>
             <!-- list nama film di sini -->
           </select>
         </div>
@@ -52,6 +54,7 @@
     </section>
     <section id="msg">
       <div id='msg-container'>
+        <!-- <p></p> -->
       </div>
       <button type="button" class="btn btn-primary mb-2 cancel-btn" id="cancel-btn" onClick='cancelPemesanan()'>Cancel
         pemesanan</button>
