@@ -53,15 +53,35 @@ listMovie(movies);
 
 function namaFilm(movies) {
   const namaFilm = document.getElementById("namaFilm");
-  const jamTayang = document.getElementById("jamTayang");
+
   for (let i = 0; i < movies.length; i++) {
     namaFilm.innerHTML += `<option>${movies[i].title}</option>`;
+
     console.log(namaFilm.value, movies[i].title);
-    if (movies[i].title) {
-      for (let j = 0; j < movies[i].jamTayang.length; j++) {
-        jamTayang.innerHTML += `<option>${movies[i].jamTayang[j]}</option>`;
-      }
-    }
+    // if (namaFilm.value === movies[i].title) {
+    //   for (let j = 0; j < movies[i].jamTayang.length; j++) {
+    //     jamTayang.innerHTML += `<option>${movies[i].jamTayang[j]}</option>`;
+    //   }
+    // }
   }
 }
 namaFilm(movies);
+
+let jam = []
+function getNama(value) {
+  const jamTayang = document.getElementById("jamTayang");
+  console.log(value);
+
+  for (let i = 0; i < movies.length; i++) {
+    console.log(value, movies[i].title);
+    if (value === movies[i].title) {
+      jam = movies[i].jamTayang
+      console.log(true, jam);
+    }
+  }
+  for (let j = 0; j < jam.length; j++) {
+    jamTayang.innerHTML += `<option>${jam[j]}</option>`
+  }
+
+  jam = []
+}
