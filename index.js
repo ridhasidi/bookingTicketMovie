@@ -51,17 +51,35 @@ function listMovie(movies) {
 
 listMovie(movies);
 
+function select() {
+  console.log("clicked");
+  // let nama = document.getElementById("title-1");
+  // console.log(nama);
+}
+
 function namaFilm(movies) {
   const namaFilm = document.getElementById("namaFilm");
   const jamTayang = document.getElementById("jamTayang");
   for (let i = 0; i < movies.length; i++) {
     namaFilm.innerHTML += `<option>${movies[i].title}</option>`;
-    console.log(namaFilm.value, movies[i].title);
-    if (movies[i].title) {
-      for (let j = 0; j < movies[i].jamTayang.length; j++) {
-        jamTayang.innerHTML += `<option>${movies[i].jamTayang[j]}</option>`;
-      }
-    }
+    // console.log(namaFilm.innerText);
+    // if (namaFilm.innerText==movies[i].title) {
+
+    // }
   }
 }
 namaFilm(movies);
+
+function jamTayang(movies) {
+  const jamTayang = document.getElementById("jamTayang");
+  let judulFilm = document.getElementById("namaFilm").value;
+  console.log(judulFilm);
+  for (let i = 0; i < movies.length; i++) {
+    // if (judulFilm == movies[i].title) {
+    for (let j = 0; j < movies[i].jamTayang.length; j++) {
+      jamTayang.innerHTML += `<option>${movies[i].jamTayang[j]}</option>`;
+    }
+    // }
+  }
+}
+jamTayang(movies);
