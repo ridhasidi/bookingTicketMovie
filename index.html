@@ -8,6 +8,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css">
   <title>Booking Ticket</title>
 </head>
 
@@ -25,29 +26,34 @@
       </div>
     </section>
     <section id="formulir">
-      <form>
+      <form onsubmit="kirim(event)">
         <div class="form-group">
           <label for="namaFilm">Nama</label>
           <select class="form-control" id="namaFilm" onchange="getNama(this.value)">
             <!-- list nama film di sini -->
           </select>
         </div>
-        <div class="form-group">
+        <div class=" form-group">
           <label for="jumlahTiket">Jumlah tiket</label>
           <input type="number" class="form-control" id="jumlahTiket" placeholder="0" />
         </div>
         <div class="form-group">
           <label for="jamTayang">Jam tayang</label>
           <select class="form-control" id="jamTayang">
-            <!-- <option>07.00</option>
-            <option>10.00</option>
-            <option>13.00</option>
-            <option>15.00</option>
-            <option>17.00</option> -->
+            <!-- <option value="07.00">07.00</option>
+            <option value="10.00">10.00</option>
+            <option value="13.00">13.00</option>
+            <option value="15.00">15.00</option>
+            <option value="17.00">17.00</option> -->
           </select>
         </div>
         <button type="submit" class="btn btn-primary mb-2">Kirim</button>
       </form>
+    </section>
+    <section id="msg">
+      <p id="msg-txt"></p>
+      <button type="button" class="btn btn-primary mb-2 cancel-btn" id="cancel-btn" onClick='cancelPemesanan()'>Cancel
+        pemesanan</button>
     </section>
   </main>
   <footer></footer>

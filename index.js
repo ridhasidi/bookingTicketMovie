@@ -55,7 +55,7 @@ function namaFilm(movies) {
   const namaFilm = document.getElementById("namaFilm");
 
   for (let i = 0; i < movies.length; i++) {
-    namaFilm.innerHTML += `<option>${movies[i].title}</option>`;
+    namaFilm.innerHTML += `<option value="${movies[i].title}">${movies[i].title}</option>`;
 
     console.log(namaFilm.value, movies[i].title);
     // if (namaFilm.value === movies[i].title) {
@@ -67,21 +67,54 @@ function namaFilm(movies) {
 }
 namaFilm(movies);
 
-let jam = []
+function kirim(event) {
+  event.preventDefault()
+  let jam = document.getElementById("jamTayang").value
+  let film = document.getElementById("namaFilm").value
+  let jumlah = document.getElementById("jumlahTiket").value
+  console.log(jam, film, jumlah);
+
+  let message = document.getElementById('msg-txt')
+  let cancelButton = document.getElementById('cancel-btn')
+
+  for (let i = 0; i < movies.length; i++) {
+    let totalPrice = 0
+    if (film === movies[i].title) {
+      if (jumlah > movies[i].availableSeat) {
+        message.innerHTML = "Maaf, jumlah kursi kurang"
+        cancelButton.classList.remove('cancel-btn')
+      }
+      else {
+        totalPrice = jumlah * movies[i].price
+        message.innerHTML = `Anda memesan film ${movies[i].title} untuk ${jumlah} orang, dan harganya adalah ${totalPrice} pada jam ${jam}`
+        cancelButton.classList.remove('cancel-btn')
+      }
+    }
+  }
+}
+
+function cancelPemesanan() {
+  let message = document.getElementById('msg-txt')
+  message.innerHTML = ""
+  let cancelButton = document.getElementById('cancel-btn')
+  cancelButton.classList.add('cancel-btn')
+}
+
 function getNama(value) {
+  let jam = [];
   const jamTayang = document.getElementById("jamTayang");
   console.log(value);
 
   for (let i = 0; i < movies.length; i++) {
     console.log(value, movies[i].title);
     if (value === movies[i].title) {
-      jam = movies[i].jamTayang
+      jam = movies[i].jamTayang;
       console.log(true, jam);
+      break;
     }
   }
+  jamTayang.innerHTML = "";
   for (let j = 0; j < jam.length; j++) {
-    jamTayang.innerHTML += `<option>${jam[j]}</option>`
+    jamTayang.innerHTML += `<option>${jam[j]}</option>`;
   }
-
-  jam = []
 }
