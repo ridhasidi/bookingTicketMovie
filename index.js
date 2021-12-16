@@ -74,28 +74,34 @@ function kirim(event) {
   let jumlah = document.getElementById("jumlahTiket").value
   console.log(jam, film, jumlah);
 
-  let message = document.getElementById('msg-txt')
+  let message = document.getElementById('msg-container')
   let cancelButton = document.getElementById('cancel-btn')
+  console.log(cancelButton);
 
   for (let i = 0; i < movies.length; i++) {
     let totalPrice = 0
+    let availableSeat = movies[i].availableSeat
+    let bookedseat = movies[i].bookedSeat
     if (film === movies[i].title) {
       if (jumlah > movies[i].availableSeat) {
-        message.innerHTML = "Maaf, jumlah kursi kurang"
-        cancelButton.classList.remove('cancel-btn')
+        message.innerHTML = `<p id="msg-txt">Maaf, jumlah kursi kurang</p>`
+
       }
       else {
         totalPrice = jumlah * movies[i].price
-        message.innerHTML = `Anda memesan film ${movies[i].title} untuk ${jumlah} orang, dan harganya adalah ${totalPrice} pada jam ${jam}`
-        cancelButton.classList.remove('cancel-btn')
+        availableSeat -= jumlah
+        message.innerHTML = `<p id="msg-txt">Anda memesan film ${movies[i].title} untuk ${jumlah} orang, dan harganya adalah Rp.${totalPrice} pada pukul ${jam}, sisa kursi ${availableSeat} buah.</p>`
+
+        bookedseat += jumlah
       }
     }
   }
+  cancelButton.classList.remove('cancel-btn')
 }
 
 function cancelPemesanan() {
   let message = document.getElementById('msg-txt')
-  message.innerHTML = ""
+  message.remove()
   let cancelButton = document.getElementById('cancel-btn')
   cancelButton.classList.add('cancel-btn')
 }
