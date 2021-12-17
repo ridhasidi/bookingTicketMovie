@@ -1,0 +1,225 @@
+/* body */
+body {
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://www.bathecho.co.uk/uploads/2018/10/tivolicinemaroom-bath-1.jpg");
+  background-color: #041c32;
+}
+#background {
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+section#nowplaying {
+  padding-top: 15vh;
+}
+section#formulir {
+  margin-top: 10vh;
+}
+
+/* nav starts here */
+nav.navbar {
+  background-color: #041c32;
+}
+a.navbar-brand {
+  color: #fabb51;
+  font-weight: bolder;
+  font-family: "Playfair Display", serif;
+}
+a.navbar-brand:hover {
+  color: white;
+}
+a.nav-link {
+  color: #fabb51;
+  font-size: large;
+  margin: 0 1em;
+}
+a.nav-link:hover {
+  color: white;
+}
+
+/* card start here */
+#formulir {
+  background-color: #041c32;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px 80px;
+  margin: 20px auto;
+}
+#formulir h2 {
+  color: #fabb51;
+  text-align: center;
+}
+form {
+  margin: auto;
+}
+form label {
+  color: white;
+  padding-top: 0.8em;
+  padding-bottom: 0.2em;
+}
+form button {
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: 200px;
+  grid-template-rows: 130px 130px 50px;
+  border-radius: 20px;
+  background: #041c32;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  transition: 0.5s ease;
+  font-family: roboto;
+  height: 400px;
+  width: 263.75px;
+}
+
+.card-img-top {
+  background: image;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  margin-bottom: 0.76rem;
+}
+
+.card-title {
+  color: white;
+  font-size: 18px;
+}
+.card-text {
+  color: #ffe400;
+  margin-bottom: 0.3rem;
+  margin-top: 0rem;
+  font-size: 13px;
+}
+
+.btn {
+  background-color: #e8f0f2;
+  border-radius: 20px;
+  border-width: 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 5px 10px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 0.4rem;
+  font-weight: bold;
+}
+
+#duration {
+  color: #fff;
+  padding: 3px 6px;
+  margin-left: 5px;
+  border: 1px solid #f7f7f7;
+  border-radius: 3px;
+  font-size: 9px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* form start here */
+#formulir {
+  background-color: #041c32;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 2em 2.7em 2em;
+  margin: 2.5em auto;
+}
+#formulir h2 {
+  color: #fabb51;
+  text-align: center;
+}
+form {
+  margin: auto;
+}
+form label {
+  color: white;
+  padding-top: 0.8em;
+  padding-bottom: 0.2em;
+}
+form button {
+  margin: 2em auto;
+  padding: 20px;
+  width: 100%;
+  /* background-color: #fabb51; */
+}
+
+/* message box */
+.cancel-btn {
+  display: none;
+}
+#msg h4,
+#history h4 {
+  color: #fabb51;
+}
+
+#history-msg h5 {
+  margin-top: 1.5em;
+  color: #ffae00;
+  font-style: italic;
+}
+
+#msg-txt {
+  color: white;
+}
+#history-msg p {
+  color: white;
+  margin-bottom: 0;
+}
+
+#msg,
+#history {
+  text-align: center;
+  /* align-items: center; */
+  background-color: #041c32;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 2em 2.7em 2em;
+  margin: 2.5em auto;
+}
+
+/* footer */
+footer .container {
+  display: none;
+  background-color: #3a5772;
+}
+div.text-center.p-3 {
+  background-color: #041c32;
+  color: #fabb51;
+}
+div.text-center.p-3 span {
+  font-family: "Playfair Display", serif;
+}
