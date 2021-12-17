@@ -1,0 +1,112 @@
+/* body */
+body {
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://www.bathecho.co.uk/uploads/2018/10/tivolicinemaroom-bath-1.jpg");
+  background-color: #041c32;
+}
+#background {
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+section {
+  padding-top: 10vh;
+}
+section#formulir {
+  margin-top: 10vh;
+}
+
+/* nav starts here */
+a.navbar-brand {
+  color: #fabb51;
+  font-weight: bolder;
+}
+a.navbar-brand:hover {
+  color: white;
+}
+a.nav-link {
+  color: #fabb51;
+}
+a.nav-link:hover {
+  color: white;
+}
+/* .navbar-custom {
+  background-color: lightgreen;
+} */
+
+/* card start here */
+div.card {
+  background-color: #041c32;
+  margin: auto;
+  margin-top: 2em;
+  /* opacity: 50%; */
+}
+div.card:hover {
+  transform: translateY(-0.3em);
+  transition: 0.5s;
+}
+h5.card-title {
+  padding-top: 0.5em;
+  color: #fabb51;
+  text-align: center;
+}
+p.card-text {
+  color: white;
+}
+
+/* form start here */
+#formulir {
+  background-color: #041c32;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 2em 2.7em 2em;
+  margin: 2.5em auto;
+}
+#formulir h2 {
+  color: #fabb51;
+  text-align: center;
+}
+form {
+  margin: auto;
+}
+form label {
+  color: white;
+  padding-top: 0.8em;
+  padding-bottom: 0.2em;
+}
+form button {
+  margin: 2em auto;
+  padding: 20px;
+  width: 100%;
+  /* background-color: #fabb51; */
+}
+
+/* message box */
+.cancel-btn {
+  display: none;
+}
+#msg-txt {
+  color: white;
+}
+
+#msg, 
+#history {
+  text-align: center;
+  /* align-items: center; */
+  background-color: #041c32;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 2em 2.7em 2em;
+  margin: 2.5em auto;
+}
+
