@@ -12,8 +12,34 @@
   <body>
     <div id="background">
       <header>
-        <h1></h1>
-        <nav></nav>
+        <nav class="navbar navbar-expand-lg bg-dark py-3 fixed-top">
+          <div class="container-fluid  px-5">
+            <a class="navbar-brand" href="#">
+              <img src="https://cdn-icons-png.flaticon.com/512/3220/3220482.png" width="30" height="30" alt="error nih">
+            </a>
+            <a class="navbar-brand" href="#">HACKTIV XXI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#nowplaying">Beranda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#formulir">Pesan Tiket</a>
+                </li>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </header>
       <main>
         <section id="nowplaying">
@@ -36,7 +62,7 @@
             </div>
             <div class="form-group">
               <label for="jumlahTiket">Jumlah tiket</label>
-              <input type="number" class="form-control" id="jumlahTiket" placeholder="0" required />
+              <input type="number" class="form-control" id="jumlahTiket" placeholder="0" min="1" required />
             </div>
             <div class="form-group">
               <label for="jamTayang">Jam tayang</label>
@@ -53,10 +79,129 @@
         </section>
         <section id="msg">
           <div id="msg-container"></div>
-          <button type="button" class="btn btn-primary mb-2 cancel-btn" id="cancel-btn" onClick="cancelPemesanan()">Cancel pemesanan</button>
+          <button type="button" class="btn btn-warning mb-2 cancel-btn" id="cancel-btn" onClick="cancelPemesanan()">Cancel pemesanan</button>
         </section>
       </main>
-      <footer></footer>
+      <footer class="text-center text-white" style="background-color: #caced1;">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Images -->
+          <section class="">
+            <div class="row">
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://wallpaperaccess.com/full/6520910.jpg"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://i.pinimg.com/originals/01/52/7e/01527ee5a662a7b56dada8cbc81ee476.jpg"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://i.pinimg.com/originals/5a/c4/d2/5ac4d28a9f913a06db8e13eced589bf1.jpg"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://i.pinimg.com/originals/4e/6c/2d/4e6c2d7a55780d51cce1759c9135ea9f.jpg"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_2_5x/sources/r1/cms/prod/4679/674679-v"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://cdn06.pramborsfm.com/storage/app/media/tr:w-700,f-jpg/Prambors/Editorial/Jade%20Xu%20as%20Death%20Dealer%20-20210810021300.jpg"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Images -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2021 Copyright: HACKTIV XXI
+        </div>
+        <!-- Copyright -->
+    </footer>
     </div>
 
     <script src="./index.js"></script>

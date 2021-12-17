@@ -10,12 +10,37 @@ body {
 #background {
   width: 100%;
   height: 100%;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   background-color: rgba(0, 0, 0, 0.75);
 }
+
+section {
+  padding-top: 10vh;
+}
+section#formulir {
+  margin-top: 10vh;
+}
+
+/* nav starts here */
+a.navbar-brand {
+  color: #fabb51;
+  font-weight: bolder;
+}
+a.navbar-brand:hover {
+  color: white;
+}
+a.nav-link {
+  color: #fabb51;
+}
+a.nav-link:hover {
+  color: white;
+}
+/* .navbar-custom {
+  background-color: lightgreen;
+} */
 
 /* card start here */
 div.card {
@@ -63,4 +88,23 @@ form button {
   padding: 20px;
   width: 100%;
   /* background-color: #fabb51; */
+}
+
+/* message box */
+.cancel-btn {
+  display: none;
+}
+#msg-txt {
+  color: white;
+}
+
+#msg {
+  text-align: center;
+  /* align-items: center; */
+  background-color: #041c32;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 2em 2.7em 2em;
+  margin: 2.5em auto;
 }

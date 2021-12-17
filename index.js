@@ -85,16 +85,17 @@ function kirim(event) {
     if (film === movies[i].title) {
       if (jumlah > movies[i].availableSeat) {
         message.innerHTML = `<p id="msg-txt">Maaf, jumlah kursi kurang</p>`;
+        cancelButton.classList.remove("cancel-btn");
       } else {
         totalPrice = jumlah * movies[i].price;
         availableSeat -= jumlah;
         message.innerHTML = `<p id="msg-txt">Anda memesan film ${movies[i].title} untuk ${jumlah} orang, dan harganya adalah Rp.${totalPrice} pada pukul ${jam}, sisa kursi ${availableSeat} buah.</p>`;
 
         bookedseat += jumlah;
+        cancelButton.classList.remove("cancel-btn");
       }
     }
   }
-  cancelButton.classList.remove("cancel-btn");
 }
 
 function cancelPemesanan() {
