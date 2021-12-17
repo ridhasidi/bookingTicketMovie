@@ -1,34 +1,46 @@
 const movies = [
   {
-    title: "Spiderman",
+    title: "Spider-Man: No Way Home",
     price: 30000,
+    release: "2021, Tom Holland, Zendaya",
+    genre: "Action, Adventure",
+    duration: "148min",
     availableSeat: 10,
     bookedSeat: 0,
     img: "https://fr.web.img4.acsta.net/pictures/21/11/16/10/01/4860598.jpg",
     jamTayang: ["12:00", "13:00", "15:00", "17:00", "21:00"],
   },
   {
-    title: "Eternals",
+    title: "Army of Thieves",
     price: 30000,
+    release: "2021, Matthias Schweighöfer",
+    genre: "Action, Crime",
+    duration: "127min",
     availableSeat: 10,
     bookedSeat: 0,
-    img: "https://fr.web.img4.acsta.net/pictures/21/11/16/10/01/4860598.jpg",
+    img: "https://m.media-amazon.com/images/M/MV5BNzQxYzNjMGItNzVlMS00NjBhLWI4NTItMmVkZTI0NGE3ZDI2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
     jamTayang: ["12:00", "13:00", "15:00", "17:00", "16:00"],
   },
   {
-    title: "Yuni",
+    title: "Resident Evil: Welcome to Raccoon City",
     price: 30000,
+    release: "2021, Kaya Scodelario",
+    genre: "Action, Horror",
+    duration: "107min",
     availableSeat: 10,
     bookedSeat: 0,
-    img: "https://fr.web.img4.acsta.net/pictures/21/11/16/10/01/4860598.jpg",
+    img: "https://www.staynerd.com/wp-content/uploads/2021/10/resident-evil-film-poster-00-819x1024.jpg",
     jamTayang: ["12:00", "13:00", "15:00", "16:00", "17:00"],
   },
   {
-    title: "Seperti dendam",
+    title: "Red Notice",
     price: 30000,
+    release: "2021, Ryan Reynolds, Gal Gadot",
+    genre: "Action, Comedy",
     availableSeat: 10,
+    duration: "118min",
     bookedSeat: 0,
-    img: "https://fr.web.img4.acsta.net/pictures/21/11/16/10/01/4860598.jpg",
+    img: "https://m.media-amazon.com/images/M/MV5BZmRjODgyMzEtMzIxYS00OWY2LTk4YjUtMGMzZjMzMTZiN2Q0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
     jamTayang: ["12:00", "13:00", "15:00", "17:00", "24:00"],
   },
 ];
@@ -38,16 +50,20 @@ function listMovie(movies) {
   // console.log(listMovies);
   for (let i = 0; i < movies.length; i++) {
     listMovies.innerHTML += `<div class="col">
-    <div class="card" style="width: 18rem;">
+    <div class="card">
       <div class="card-body">
       <img class="card-img-top" src="${movies[i].img}" alt="${movies[i].title}">
         <h5 class="card-title">${movies[i].title}</h5>
-        <p class="card-text">Harga</p>
+        <p class="card-text">${movies[i].release}</p>
+        <p class="card-text">${movies[i].genre} <span id="duration">${movies[i].duration}</span></p>
+        <a href="#" class="btn btn-primary">Rp ${movies[i].price}</a> 
       </div>
     </div>
   </div>`;
   }
 }
+
+{/* <img class="card-img-top" src="${movies[i].img}" alt="${movies[i].title}"></img> */}
 
 listMovie(movies);
 
