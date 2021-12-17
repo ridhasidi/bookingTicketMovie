@@ -220,6 +220,19 @@ function cancelPemesanan() {
   message.remove();
   let cancelButton = document.getElementById("cancel-btn");
   cancelButton.classList.add("cancel-btn");
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].title === history[history.length - 1].nama) {
+      for (let j = 0; j < movies[i].jadwal.length; j++) {
+        if (movies[i].jadwal[j].jam === history[history.length - 1].jamNonton) {
+          movies[i].jadwal[j].availableSeat += Number(history[history.length - 1].tiket)
+        }
+      }
+    }
+  }
+  console.log(movies);
+  history.pop()
+  console.log(history);
+  historyButton()
 }
 
 function getNama(value) {
@@ -251,6 +264,7 @@ function getNama(value) {
 // Fungsi untuk melihat history
 function historyButton() {
   let historyContainer = document.getElementById('history')
+  historyContainer.innerHTML = ""
   for (let i = 0; i < history.length; i++) {
     historyContainer.innerHTML +=
       `<div id="history-msg">
@@ -262,5 +276,5 @@ function historyButton() {
   }
 
   console.log(historyContainer);
-  history = []
+
 }
