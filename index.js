@@ -2,36 +2,116 @@ const movies = [
   {
     title: "Spiderman",
     price: 30000,
-    availableSeat: 10,
+    // availableSeat: 10,
     bookedSeat: 0,
     img: "https://fr.web.img4.acsta.net/pictures/21/11/16/10/01/4860598.jpg",
-    jamTayang: ["12:00", "13:00", "15:00", "17:00", "21:00"],
+    // jamTayang: ["12:00", "13:00", "15:00", "17:00", "21:00"],
+    // Nambah disini
+    jadwal: [
+      {
+        jam: '07.00',
+        availableSeat: 10
+      }, {
+        jam: '08.00',
+        availableSeat: 10
+      }, {
+        jam: '09.00',
+        availableSeat: 10
+      }, {
+        jam: '10.00',
+        availableSeat: 10
+      }, {
+        jam: '21.00',
+        availableSeat: 10
+      },
+    ]
   },
   {
     title: "Eternals",
     price: 30000,
-    availableSeat: 10,
+    // availableSeat: 10,
     bookedSeat: 0,
     img: "https://fr.web.img4.acsta.net/pictures/21/11/16/10/01/4860598.jpg",
-    jamTayang: ["12:00", "13:00", "15:00", "17:00", "16:00"],
+    // jamTayang: ["12:00", "13:00", "15:00", "17:00", "16:00"],
+    jadwal: [
+      {
+        jam: '12.00',
+        availableSeat: 10
+      }, {
+        jam: '13.00',
+        availableSeat: 10
+      }, {
+        jam: '15.00',
+        availableSeat: 10
+      }, {
+        jam: '17.00',
+        availableSeat: 10
+      }, {
+        jam: '21.00',
+        availableSeat: 10
+      },
+    ]
+
   },
   {
     title: "Yuni",
     price: 30000,
-    availableSeat: 10,
+    // availableSeat: 10,
     bookedSeat: 0,
     img: "https://fr.web.img4.acsta.net/pictures/21/11/16/10/01/4860598.jpg",
-    jamTayang: ["12:00", "13:00", "15:00", "16:00", "17:00"],
+    // jamTayang: ["12:00", "13:00", "15:00", "16:00", "17:00"],
+    jadwal: [
+      {
+        jam: '11.00',
+        availableSeat: 10
+      }, {
+        jam: '12.00',
+        availableSeat: 10
+      }, {
+        jam: '14.00',
+        availableSeat: 10
+      }, {
+        jam: '18.00',
+        availableSeat: 10
+      }, {
+        jam: '21.00',
+        availableSeat: 10
+      },
+    ]
+
   },
   {
     title: "Seperti dendam",
     price: 30000,
-    availableSeat: 10,
+    // availableSeat: 10,
     bookedSeat: 0,
     img: "https://fr.web.img4.acsta.net/pictures/21/11/16/10/01/4860598.jpg",
-    jamTayang: ["12:00", "13:00", "15:00", "17:00", "24:00"],
+    // jamTayang: ["12:00", "13:00", "15:00", "17:00", "24:00"],
+    jadwal: [
+      {
+        jam: '6.00',
+        availableSeat: 10
+      }, {
+        jam: '10.00',
+        availableSeat: 10
+      }, {
+        jam: '15.00',
+        availableSeat: 10
+      }, {
+        jam: '17.00',
+        availableSeat: 10
+      }, {
+        jam: '20.00',
+        availableSeat: 10
+      },
+    ]
+
   },
 ];
+
+// history variabel
+
+let history = []
 
 function listMovie(movies) {
   const listMovies = document.getElementById("list-movie");
@@ -78,21 +158,58 @@ function kirim(event) {
   let cancelButton = document.getElementById("cancel-btn");
   console.log(cancelButton);
 
+
+
   for (let i = 0; i < movies.length; i++) {
     let totalPrice = 0;
-    let availableSeat = movies[i].availableSeat;
-    let bookedseat = movies[i].bookedSeat;
-    if (film === movies[i].title) {
-      if (jumlah > movies[i].availableSeat) {
-        message.innerHTML = `<p id="msg-txt">Maaf, jumlah kursi kurang</p>`;
-        cancelButton.classList.remove("cancel-btn");
-      } else {
-        totalPrice = jumlah * movies[i].price;
-        availableSeat -= jumlah;
-        message.innerHTML = `<p id="msg-txt">Anda memesan film ${movies[i].title} untuk ${jumlah} orang, dan harganya adalah Rp.${totalPrice} pada pukul ${jam}, sisa kursi ${availableSeat} buah.</p>`;
 
-        bookedseat += jumlah;
-        cancelButton.classList.remove("cancel-btn");
+    // let availableSeat = movies[i].availableSeat;
+    // if (film === movies[i].title) {
+    //   if (jumlah > movies[i].availableSeat) {
+    //     message.innerHTML = `<p id="msg-txt">Maaf, jumlah kursi kurang</p>`;
+    //     cancelButton.classList.remove("cancel-btn");
+    //   } else {
+    //     totalPrice = jumlah * movies[i].price;
+    //     movies[i].availableSeat -= jumlah
+    //     console.log(movies[i]);
+    //     message.innerHTML = `<p id="msg-txt">Anda memesan film ${movies[i].title} untuk ${jumlah} orang, dan harganya adalah Rp.${totalPrice} pada pukul ${jam}, sisa kursi ${movies[i].availableSeat} buah.</p>`;
+
+    //     movies[i].bookedSeat += jumlah;
+    //     cancelButton.classList.remove("cancel-btn");
+
+    //     history.push({ // Nambah disini
+    //       nama: film,
+    //       jamNonton: jam,
+    //       tiket: jumlah
+    //     })
+    //   }
+    // }
+
+    // Ini kode gantinya
+    // let jadwal = movies[i].jadwal
+    for (let j = 0; j < movies[i].jadwal.length; j++) {
+      // console.log(movies[i].jadwal, movies[i].title, film);
+      if (film === movies[i].title) {
+        if (jam === movies[i].jadwal[j].jam) {
+          console.log(movies[i].jadwal[j].jam);
+          if (jumlah > movies[i].jadwal[j].availableSeat) {
+            message.innerHTML = `<p id="msg-txt">Maaf, jumlah kursi kurang</p>`;
+            cancelButton.classList.remove("cancel-btn");
+          }
+          else {
+            totalPrice = jumlah * movies[i].price;
+            movies[i].jadwal[j].availableSeat -= jumlah
+            message.innerHTML = `<p id="msg-txt">Anda memesan film ${movies[i].title} untuk ${jumlah} orang, dan harganya adalah Rp.${totalPrice} pada pukul ${jam}, sisa kursi ${movies[i].jadwal[j].availableSeat} buah.</p>`;
+            movies[i].bookedSeat += jumlah;
+            cancelButton.classList.remove("cancel-btn");
+
+            history.push({ // Nambah disini
+              nama: film,
+              jamNonton: jam,
+              tiket: jumlah
+            })
+          }
+        }
       }
     }
   }
@@ -111,15 +228,39 @@ function getNama(value) {
   console.log(value);
 
   for (let i = 0; i < movies.length; i++) {
-    console.log(value, movies[i].title);
-    if (value === movies[i].title) {
-      jam = movies[i].jamTayang;
-      console.log(true, jam);
-      break;
+    // console.log(value, movies[i].title);
+    // if (value === movies[i].title) {
+    //   jam = movies[i].jamTayang;
+    //   console.log(true, jam);
+    //   break;
+    // }
+    for (let j = 0; j < movies[i].jadwal.length; j++) { // Nambah disini
+      if (value === movies[i].title) {
+        jam.push(movies[i].jadwal[j].jam)
+        // console.log(jam);
+      }
     }
   }
   jamTayang.innerHTML = "";
   for (let j = 0; j < jam.length; j++) {
     jamTayang.innerHTML += `<option>${jam[j]}</option>`;
   }
+}
+
+
+// Fungsi untuk melihat history
+function historyButton() {
+  let historyContainer = document.getElementById('history')
+  for (let i = 0; i < history.length; i++) {
+    historyContainer.innerHTML +=
+      `<div id="history-msg">
+      <h2></h2>
+    <h3>${history[i].nama}</h3>
+    <p>Sejumlah: ${history[i].tiket}</p>
+    <p>Pada pukul: ${history[i].jamNonton}</p>
+  </div>`
+  }
+
+  console.log(historyContainer);
+  history = []
 }

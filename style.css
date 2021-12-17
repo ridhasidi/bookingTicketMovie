@@ -98,7 +98,8 @@ form button {
   color: white;
 }
 
-#msg {
+#msg, 
+#history {
   text-align: center;
   /* align-items: center; */
   background-color: #041c32;
@@ -108,3 +109,4 @@ form button {
   padding: 2em 2.7em 2em;
   margin: 2.5em auto;
 }
+
