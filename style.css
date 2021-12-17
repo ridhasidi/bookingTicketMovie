@@ -23,6 +23,9 @@ section#nowplaying {
 section#formulir {
   margin-top: 10vh;
 }
+section#space {
+  padding-top: 3vh;
+}
 
 /* nav starts here */
 nav.navbar {
@@ -45,7 +48,7 @@ a.nav-link:hover {
   color: white;
 }
 
-/* card start here */
+/* form start here */
 #formulir {
   background-color: #041c32;
   width: 50%;
@@ -72,7 +75,10 @@ form button {
   width: 100%;
 }
 
+/* card */
 .card {
+  margin: auto;
+  margin-top: 2em;
   display: flex;
   flex-wrap: wrap;
   grid-template-columns: 200px;
