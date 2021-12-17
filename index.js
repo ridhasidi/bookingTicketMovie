@@ -134,7 +134,7 @@ function listMovie(movies) {
   // console.log(listMovies);
   for (let i = 0; i < movies.length; i++) {
     listMovies.innerHTML += `<div class="col">
-    <div class="card" style="background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) ), url('${movies[i].img}'); display: flex; background-position: center; background-size: cover; display: flex;
+    <div class="card" style="background: url('${movies[i].img}'); display: flex; background-position: center; background-size: cover; display: flex;
     justify-content:flex-end;">
       <div style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ); padding: 10px; width: 263.75px; border-bottom-right-radius: 20px 20px; border-bottom-left-radius: 20px 20px; border-top-left-radius: 20px 20px; border-top-right-radius: 20px 20px;">
         <h5 class="card-title">${movies[i].title}</h5>
@@ -283,7 +283,6 @@ function historyButton() {
   historyContainer.innerHTML = "";
   for (let i = 0; i < history.length; i++) {
     historyContainer.innerHTML += `<div id="history-msg">
-    <h4>Riwayat Pemesanan</h4>
     <h5>${history[i].nama}</h5>
     <p>Sejumlah: ${history[i].tiket}</p>
     <p>Pada pukul: ${history[i].jamNonton}</p>
